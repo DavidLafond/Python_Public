@@ -59,10 +59,10 @@ class MainWindow():
             self.canvas.itemconfig(self.image_on_canvas, image = self.my_images_pil)
             self.label.configure(text = f"Image Left: {str(len(self.my_images)-self.my_image_number)}")
 
-            self.copy_file = self.folder + "/_SPLIT/" + self.button2["text"] + "/" + os.path.basename(self.my_images[self.my_image_number])
+            self.copy_file = self.folder + "/_SPLIT/" + self.button["text"] + "/" + os.path.basename(self.my_images[self.my_image_number])
             os.makedirs(os.path.dirname(self.copy_file), exist_ok=True)
             copyfile(self.my_images[self.my_image_number], self.copy_file)     
-            print(self.button2["text"])
+            print(self.button["text"])
 
 #----------------------------------------------------------------------
 
